@@ -1,0 +1,164 @@
+<!-- 관용적 표현/이 문서는 html에 있다는 뜻 -->
+<!DOCTYPE html>
+<!-- <html></html>은 최고위층 태그-->
+<html>
+<!-- <head></head>는 본문을 설명함-->
+
+<head>
+    <!-- <title></title> 웹페이지의 제목 -->
+    <title>WEB1 - HTML</title>
+
+    <!-- utf-8로 문서를 읽음 -->
+    <meta charset="utf-8">
+
+    <!-- 방문자 분석 기능/analytics.google 이용-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELCP6CDKW1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ELCP6CDKW1');
+    </script>
+
+    <!-- 
+            <link> 태그를 통해 style.css 파일과 연결되어 있고
+            웹브라우저는 style.css 파일을 다운 받아서 웹페이지에 적용 
+
+            중복을 줄여 효율적임
+        -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<!-- <body></body>는 분문의 내용-->
+
+<body>
+    <!-- 가장 큰 제목 -->
+    <h1><a href="index.html">WEB</a></h1>
+    <!--
+            <ul></ul>은 부모태그 -> Unordered List/연관된 항목의 경계를 지음/그룹핑
+            <ol></ol>은 부모태그 -> ordered List/자동으로 숫자 넘버링
+            <li></li>는 자식태그 -> 목차 list
+            
+            2대(부모-자식)가 같이 다님
+        -->
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+
+        <div id="article">
+            <!-- <h1></h1> ~ <h6></h6>은 제목 -->
+            <h2>HTML</h2>
+
+            <p>하이퍼 텍스트 마크업 언어(영어: Hyper Text Markup Language, HTML, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)는
+                웹 페이지를 위한 지배적인 마크업 언어다. 또한, HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라
+                링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공한다. 그리고 이미지와 객체를 내장하고 대화형 양식을
+                생성하는 데 사용될 수 있다. HTML은 웹 페이지 콘텐츠 안의 꺾쇠 괄호에 둘러싸인 "태그"로 되어있는 HTML 요소 형태로 작성한다.
+                HTML은 웹 브라우저와 같은 HTML 처리 장치의 행동에 영향을 주는 자바스크립트와 본문과 그 밖의 항목의 외관과 배치를 정의하는
+                CSS 같은 스크립트를 포함하거나 불러올 수 있다. HTML과 CSS 표준의 공동 책임자인 W3C는 명확하고 표상적인 마크업을 위하여
+                CSS의 사용을 권장한다.</p>
+
+            <!-- 동영상 넣기/유튜브 소스코드 복사-->
+            <p>
+                <iframe width="852" height="479"
+                    src="https://www.youtube.com/embed/tZooW6PritE?list=PLuHgQVnccGMDZP7FJ_ZsUrdCGH68ppvPb"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </p>
+
+            <!-- 
+                    <strong></strong>은 굵은 글씨
+                    <u></u>는 밑줄
+                    <a></a>는 링크걸기
+                    href(=hypertext reference) 링크주소
+                    target="_blank" 새탭으로 열기
+                    title 툴팁 띄움(마우스 가져다놓으면 무엇에 관한 내용인지 알려줌)
+                -->
+            <p>
+                <a href="https://dev.w3.org/html5/spec-LC/" target="_blank" title="html5 speicification">
+                    <strong><u>HTML</u></strong></a> start!
+            </p>
+
+            <!-- 
+                    <br>은 줄바꿈
+                    <p></p>는 단락
+                -->
+            <p>1. tag를 배운다.</p>
+            <p>2. 사진을 넣어본다.</p>
+
+            <!--
+                    <img>는 사진
+                    src=""는 사진 이름
+                    width="%"는 사진 크기
+                -->
+            <img src="coding.jpg" width="100%">
+            <p style="margin-top: 40px;">쉬워서 은근 재밌는듯?!
+                하지만 아직은 초보,,,</p>
+
+            <!--
+                    table은 3대(부모-자식-자식)가 같이 다님
+                -->
+            <table>
+                <tr>
+                    <td>head</td>
+                    <td>98.1%</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>97.9%</td>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td>97.9%</td>
+                </tr>
+            </table>
+
+            <!-- 댓글 기능/Disqus 이용/소스코드 복사 -->
+            <p>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://web1-mrejnfr9ds.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                    by Disqus.</a></noscript>
+            </p>
+
+            <!-- 채팅 기능/tawk.to 이용/ 소스코드 복사-->
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                (function () {
+                    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/601996f2a9a34e36b97317b0/1ethvb97t';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+            </script>
+            <!--End of Tawk.to Script-->
+        </div>
+    </div>
+</body>
+
+</html>

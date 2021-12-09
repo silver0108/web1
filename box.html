@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- border을 이용해 태그의 사용 공간을 알아봄-->
+        <style>
+        /* 
+            h1은 block level element(전체 공간 사용)
+            a는 inline element(자신의 content만큼의 공간 사용)
+            ,를 이용해 선택자를 한번에 사용 가능
+        */
+            h1, a {
+            /*
+                border-width: 5px;
+                border-color: red;
+                border-style: solid;
+                를 한번에 나타냄
+            */
+                border: 5px solid red;
+                /* 테두리 안 간격 */
+                padding: 20px;
+                /* 테두리 밖 간격 */
+                margin: 20px;
+            /* 
+                기본값을 inline으로 변환
+                display: inline;
+                
+                기본값을  block level로 변환
+                display: block;
+
+                안보이게 함
+                display: none;
+            */    
+                display: block;
+                /* 박스 넓이 */
+                width: 100px;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS</h1> 
+        <h1>CSS</h1>
+    </body>
+</html>

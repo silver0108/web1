@@ -1,0 +1,76 @@
+/* <style></style> 태그 안에 있는 내용 */
+body {
+    /* 화면 전체에 margin을 없앰 */
+    margin: 0;
+}
+/*
+    모든 <a></a> 태그에 대해서 폰트 색을 검정색으로, 데코(밑줄)를 없앰/
+    a와 같은 것을 선택자라고 부름/
+    color:black;과 같은 것은 지정된 효과(=선언)/
+    color와 같은 것은 속성, black과 같은 것은 속성 값이라고 부름
+*/
+a {
+    color:black;
+    text-decoration: none;
+}
+/* #active는 id 선택자 */
+#active {
+    color: red;
+}
+/* .saw는 클래스가 saw인 태그를 가리키는 선택자라는 의미 */
+.saw {
+    color: gray;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    /* border-bottom은 WEB 밑에 있는 선*/
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+}
+
+ol {
+    /* border-bottom은 리스트 옆에 있는 선*/
+    border-right: 1px solid gray;
+    /* width는 선의 폭 지정 */
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+}
+
+#grid {
+    display: grid;
+    /* 같은 행에 배치
+       1fr 남은 영역 다 사용한다는 의미 
+       -> fr: 화면을 늘이거나 줄이면 자동으로 조정됨
+
+        ol 태그 안에 있는 것은 150px로, div태그 안에 있는 것은 1fr
+    */
+    grid-template-columns: 150px 1fr;
+}
+/* id 값이 grid인 것 중에서 ol 태그 */
+#grid ol{
+    padding-left: 33px;
+}
+
+/* id 값이 grid인 것 중에서 id 값이 article인 것 */
+#grid #article {
+    padding-left: 25px;
+}
+
+/* screen width < 800px */
+@media(max-width:800px){
+    #grid {
+        display: block;
+    }
+
+    ol {
+        border-right:none;
+    }
+
+    h1{
+        border-bottom: none;
+    }
+}
