@@ -15,8 +15,9 @@
         [CSS] 태그 사용법/
         <style></style>은 디자인과 관련된 CSS에 관한 태그/
         우선순위: id 선택자 > class 선택자 > tag 선택자(같은 것에는 순서 영향이 있기 때문)
-     -->
+    
     <style>
+        /* body의 margin을 조정해서 선을 화면에 꽉 채움*/
         body {
             margin: 0;
         }
@@ -24,7 +25,7 @@
         /*
             모든 <a></a> 태그에 대해서 폰트 색을 검정색으로, 데코(밑줄)를 없앰/
             a와 같은 것을 선택자라고 부름/
-            color:black;과 같은 것은 지정된 효과(=선언)/
+            color:black;과 같은 것은 지정된 효과(declaration)(=선언)/
             color와 같은 것은 속성, black과 같은 것은 속성 값이라고 부름
         */
         a {
@@ -36,7 +37,6 @@
         #active {
             color: red;
         }
-
         /* .saw는 클래스가 saw인 태그를 가리키는 선택자라는 의미 */
         .saw {
             color: gray;
@@ -54,7 +54,7 @@
         ol {
             /* border-bottom은 리스트 옆에 있는 선*/
             border-right: 1px solid gray;
-            /* width는 선의 폭 지정 */
+            /* ol태그는 block level, width로 폭 지정 */
             width: 100px;
             margin: 0;
             padding: 20px;
@@ -75,7 +75,8 @@
             padding-left: 25px;
         }
 
-        /* screen width < 800px */
+        /* 미디어 쿼리
+           screen width < 800px */
         @media(max-width:800px) {
             #grid {
                 display: block;
@@ -90,6 +91,15 @@
             }
         }
     </style>
+    -->
+
+    <!-- 
+            <link> 태그를 통해 style.css 파일과 연결되어 있고
+            웹브라우저는 style.css 파일을 다운 받아서 웹페이지에 적용 
+
+            중복을 줄여 효율적임
+    -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <!-- <body></body>는 분문의 내용-->
@@ -118,9 +128,9 @@
         <li><a href="2.html" style="color:red; text-decoration: underline;" class="saw">CSS</a></li>
         -->
 
-            <!-- class는 그룹핑
-            class의 속성 값은 여러개가 가능하며 띄어쓰기로 구분 
-            id도 지정 가능-->
+            <!-- class는 그룹핑,
+            class의 속성 값은 여러개가 가능하며 띄어쓰기로 구분 (ex) class="saw active",
+            id도 지정 가능 -->
             <li><a href="2.html" class="saw" id="active">CSS</a></li>
             <li><a href="3.html">JavaScript</a></li>
         </ol>

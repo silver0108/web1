@@ -1,6 +1,6 @@
 /* <style></style> 태그 안에 있는 내용 */
 body {
-    /* 화면 전체에 margin을 없앰 */
+    /* body의 margin을 조정해서 선을 화면에 꽉 채움*/
     margin: 0;
 }
 /*
@@ -34,7 +34,7 @@ h1 {
 ol {
     /* border-bottom은 리스트 옆에 있는 선*/
     border-right: 1px solid gray;
-    /* width는 선의 폭 지정 */
+    /* ol태그는 block level, width로 폭 지정 */
     width: 100px;
     margin: 0;
     padding: 20px;
@@ -60,7 +60,8 @@ ol {
     padding-left: 25px;
 }
 
-/* screen width < 800px */
+/* 미디어 쿼리
+   screen width < 800px */
 @media(max-width:800px){
     #grid {
         display: block;
